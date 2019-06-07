@@ -1,0 +1,30 @@
+version: 0.0
+os: linux
+files:
+- source: /
+destination: /home/ubuntu/chatapp/
+permissions:
+- object: /home/ubuntu/chatapp/
+pattern: "**"
+owner: ubuntu
+group: ubuntu
+hooks:
+BeforeInstall:
+- location: scripts/cleanup-instance.sh
+timeout: 300
+runas: ubuntu
+AfterInstall:
+- location: scripts/install-dependancies.sh
+timeout: 600
+runas: ubuntu
+- location: scripts/gunicorn-start.sh
+timeout: 600
+runas: ubuntu
+- location: scripts/ngnix-start.sh
+timeout: 600
+runas: ubuntu
+ApplicationStart:
+- location: scripts/start-application.sh
+timeout: 600
+runas: ubuntu
+
