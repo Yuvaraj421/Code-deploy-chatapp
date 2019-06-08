@@ -4,7 +4,7 @@ After=network.target
 [Service]
 User=root
 Group=www-data
-WorkingDirectory=/home/ubuntu/gunicorn.service
+WorkingDirectory=/home/ubuntu/
 ExecStart= /home/ubuntu/chatapp/env/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/chatapp/chatapp.sock chatapplication.wsgi:application
 [Install]
 WantedBy=multi-user.target ' > temp/gunicorn.service
