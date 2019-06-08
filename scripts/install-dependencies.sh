@@ -10,4 +10,5 @@ sudo pip3 install -r requirement.txt
 pip3 install channels
 pip3 install psycopg2-binary
 pip3 install django 
+sudo apt-get install nginx
 
