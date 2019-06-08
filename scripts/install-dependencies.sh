@@ -11,10 +11,6 @@ pip3 install channels
 pip3 install psycopg2-binary
 pip3 install django 
 sudo apt install postgresql postgresql-contrib
-sudo -i -u postgres
-psql
-create database chatapp;
-alter user postgres with password 'admin123'
 pip3 install gunicorn
 sudo apt-get install nginx -y
 
