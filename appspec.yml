@@ -14,7 +14,7 @@ hooks:
      timeout: 300
      runas: ubuntu
   AfterInstall:
-   - location: scripts/install-dependancies.sh
+   - location: scripts/install-dependencies.sh
      timeout: 600
      runas: ubuntu
    - location: scripts/gunicorn-start.sh
