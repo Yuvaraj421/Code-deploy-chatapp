@@ -23,8 +23,8 @@ hooks:
    - location: scripts/nginx-start.sh
      timeout: 600
      runas: ubuntu
-  ApplicationStart:
-   - location: scripts/start-application.sh
-     timeout: 600
-     runas: ubuntu
+  #ApplicationStart:
+  # - location: scripts/start-application.sh
+  #   timeout: 600
+  #   runas: ubuntu
 
